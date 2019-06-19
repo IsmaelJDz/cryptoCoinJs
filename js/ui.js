@@ -1,4 +1,20 @@
 class UI {
+
+  constructor(){
+    this.init();
+  }
+
+  init(){
+    this.construirSelect()
+  }
+
+  construirSelect(){
+    api.obtenerMonedasApi()
+      .then(monedas => {
+
+      })
+  }
+
   mostrarMensaje(mensaje, clases) {
     const div = document.createElement("div");
     div.className = clases;
