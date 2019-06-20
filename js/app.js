@@ -21,6 +21,16 @@ formulario.addEventListener("submit", e => {
       "alert bg-danger text-center"
     );
   } else {
+    //todo bien consultar la api
+    api
+      .obtenerValores(monedaSelecionada, criptoMonedaSelecionada)
+      .then(data => {
+        ui.mostrarResultado(
+          data.resultado.RAW,
+          monedaSelecionada,
+          criptoMonedaSelecionada
+        );
+      });
   }
 });
 
